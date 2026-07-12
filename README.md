@@ -79,10 +79,18 @@ Selain itu, sistem menerapkan Role Based Access Control (RBAC) sehingga hak akse
 
 # Tata Cara Menjalankan Program Ini
 
-Sistem ini dikonfigurasi dan diuji menggunakan lingkungan MySQL (via XAMPP / MariaDB).
+Sistem ini dikonfigurasi dan diuji menggunakan lingkungan **MySQL** (XAMPP/MariaDB).
 
-Buka aplikasi XAMPP dan jalankan modul MySQL.
-Buka klien SQL Anda (phpMyAdmin / DBeaver / MySQL Workbench).
-Buat basis data baru:
+## Langkah-langkah
+
+1. Buka aplikasi **XAMPP** dan jalankan modul **Apache** serta **MySQL**.
+2. Buka salah satu klien SQL berikut:
+   - phpMyAdmin
+   - DBeaver
+   - MySQL Workbench
+3. Buat database baru dengan menjalankan perintah berikut:
+
+```sql
 CREATE DATABASE spacehub_db;
 USE spacehub_db;
+```
