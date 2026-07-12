@@ -8,50 +8,65 @@ Oleh karena itu, diperlukan rancangan basis data yang mampu mengelola log akses,
 
 
 # Anggota Pengembang Kelompok 5
-Ascjul Nur Hidayah (22415007)
-La Ode Muhammad Asri Mulya (22415005)
-Siti Fajar Hamani (22415003)
-Muhammad Zikril Haq (22415014)
 
-Dosen Pengampu: Kartini Aprilia Pratiwi Nuzry, S.Kom., M.MT.
-Program Studi: Sistem dan Teknologi Informasi | Fakultas Teknik | UMK 2026
+1. Ascjul Nur Hidayah (22415007)
+2. La Ode Muhammad Asri Mulya (22415005)
+3. Siti Fajar Hamani (22415003)
+4. Muhammad Zikril Haq (22415014)
+
+**Dosen Pengampu:** Kartini Aprilia Pratiwi Nuzry, S.Kom., M.MT.  
+**Program Studi:** Sistem dan Teknologi Informasi  
+**Fakultas:** Teknik  
+**Universitas:** Universitas Muhammadiyah Kendari (UMK)  
+**Tahun:** 2026
 
 # Uraian Aturan Bisnis
-A. Pengguna Internal Sistem
-•	Setiap pengguna internal wajib memiliki satu akun untuk mengakses sistem.
-•	Setiap akun hanya dapat memiliki satu role.
-•	Satu role dapat dimiliki oleh banyak pengguna.
-•	Pengguna yang terdaftar dapat melakukan aktivitas sesuai hak akses yang diberikan.
-B. Role Pengguna
-•	Sistem menggunakan tiga role utama yaitu Staf Lapangan, Manajer, dan Auditor.
-•	Staf Lapangan bertugas mengelola aktivitas operasional harian.
-•	Manajer bertugas memantau laporan dan aktivitas sistem.
-•	Auditor bertugas melakukan pemeriksaan terhadap aktivitas audit dan keamanan data.
-C. Cabang SpaceHub
-•	SpaceHub & Co. memiliki beberapa cabang yang tersebar di berbagai lokasi.
-•	Setiap cabang memiliki sejumlah perangkat IoT dan pintu digital.
-•	Setiap cabang memiliki identitas yang unik.
-D. Perangkat IoT
-•	Setiap perangkat IoT dipasang pada satu cabang tertentu.
-•	Perangkat IoT digunakan untuk mengendalikan akses pada pintu digital.
-•	Status perangkat harus dapat diketahui untuk kebutuhan monitoring dan pemeliharaan.
-E. Pintu Digital
-•	Setiap pintu digital terhubung dengan satu perangkat IoT.
-•	Setiap pintu berada pada satu cabang tertentu.
-•	Aktivitas akses masuk dan keluar dilakukan melalui pintu digital.
-F. Log Akses
-•	Setiap aktivitas masuk dan keluar menghasilkan satu data log.
-•	Setiap log harus menyimpan informasi pengguna, pintu yang digunakan, waktu akses, dan jenis akses.
-•	Data log digunakan sebagai sumber informasi operasional dan keamanan.
-G. Audit Trail
-•	Setiap aktivitas INSERT, UPDATE, dan DELETE harus dicatat secara otomatis.
-•	Audit trail harus menyimpan identitas pengguna yang melakukan aktivitas.
-•	Audit trail harus menyimpan waktu aktivitas dan jenis perubahan yang dilakukan.
-•	Data audit tidak boleh dihapus oleh pengguna biasa.
-H. Pengarsipan Data
-•	Data ACCESS_LOG yang berusia lebih dari 6 bulan dipindahkan ke ARCHIVE_ACCESS_LOG.
-•	Data arsip tetap dapat digunakan untuk keperluan audit dan pelaporan.
-•	Data arsip tidak digunakan pada transaksi operasional harian.
+
+## A. Pengguna Internal
+1. Setiap pengguna internal wajib memiliki satu akun untuk mengakses sistem.
+2. Setiap akun hanya dapat memiliki satu role.
+3. Satu role dapat dimiliki oleh banyak pengguna.
+4. Pengguna yang terdaftar dapat melakukan aktivitas sesuai hak akses yang diberikan.
+
+## B. Role Pengguna
+1. Sistem menggunakan tiga role utama:
+   - Staf Lapangan
+   - Manajer
+   - Auditor
+2. Staf Lapangan bertugas mengelola aktivitas operasional harian.
+3. Manajer bertugas memantau laporan dan aktivitas sistem.
+4. Auditor bertugas melakukan pemeriksaan terhadap aktivitas audit dan keamanan data.
+
+## C. Cabang SpaceHub
+1. SpaceHub & Co. memiliki beberapa cabang yang tersebar di berbagai lokasi.
+2. Setiap cabang memiliki sejumlah perangkat IoT dan pintu digital.
+3. Setiap cabang memiliki identitas yang unik.
+
+## D. Perangkat IoT
+1. Setiap perangkat IoT dipasang pada satu cabang tertentu.
+2. Perangkat IoT digunakan untuk mengendalikan akses pada pintu digital.
+3. Status perangkat harus dapat diketahui untuk kebutuhan monitoring dan pemeliharaan.
+
+## E. Pintu Digital
+1. Setiap pintu digital terhubung dengan satu perangkat IoT.
+2. Setiap pintu berada pada satu cabang tertentu.
+3. Aktivitas akses masuk dan keluar dilakukan melalui pintu digital.
+
+## F. Log Akses
+1. Setiap aktivitas masuk dan keluar menghasilkan satu data log.
+2. Setiap log harus menyimpan informasi pengguna, pintu yang digunakan, waktu akses, dan jenis akses.
+3. Data log digunakan sebagai sumber informasi operasional dan keamanan.
+
+## G. Audit Trail
+1. Setiap aktivitas INSERT, UPDATE, dan DELETE harus dicatat secara otomatis.
+2. Audit trail harus menyimpan identitas pengguna yang melakukan aktivitas.
+3. Audit trail harus menyimpan waktu aktivitas dan jenis perubahan yang dilakukan.
+4. Data audit tidak boleh dihapus oleh pengguna biasa.
+
+## H. Pengarsipan Data
+1. Data `ACCESS_LOG` yang berusia lebih dari 6 bulan dipindahkan ke `ARCHIVE_ACCESS_LOG`.
+2. Data arsip tetap dapat digunakan untuk keperluan audit dan pelaporan.
+3. Data arsip tidak digunakan pada transaksi operasional harian.
 
 # Solusi Logis Dan Tantangan Khusus
 Tantangan utama pada domain ini adalah volume data log yang sangat besar akibat aktivitas perangkat IoT yang berlangsung secara terus-menerus. Jika seluruh data log disimpan dalam satu tabel operasional, maka performa basis data akan menurun dan proses pencarian data menjadi lambat.
