@@ -1,4 +1,4 @@
-# Domain-Keamanan-Audit-Log-dan-Siklus-hidup-data-Data-Lifecycle-Management-
+# Domain Keamanan, Audit Log, dan Siklus hidup data (Data Lifecycle Management)
 # ![Database](https://img.shields.io/badge/DATABASE-MySQL-blue) ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue) ![Tugas Besar](https://img.shields.io/badge/UNIVERSITAS-MUHAMMADIYAH_KENDARI-brightgreen) ![Status](https://img.shields.io/badge/STATUS-COMPLETED-success)
 Domain Kelompok 5 berfokus pada pengelolaan keamanan sistem, audit aktivitas pengguna, serta pengelolaan siklus hidup data (Data Lifecycle Management) pada lingkungan SpaceHub & Co.
 
@@ -79,3 +79,10 @@ Selain itu, sistem menerapkan Role Based Access Control (RBAC) sehingga hak akse
 
 # Tata Cara Menjalankan Program Ini
 
+Sistem ini dikonfigurasi dan diuji menggunakan lingkungan MySQL (via XAMPP / MariaDB).
+
+Buka aplikasi XAMPP dan jalankan modul MySQL.
+Buka klien SQL Anda (phpMyAdmin / DBeaver / MySQL Workbench).
+Buat basis data baru:
+CREATE DATABASE spacehub_db;
+USE spacehub_db;
