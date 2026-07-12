@@ -1,0 +1,2 @@
+# Domain-Keamanan-Audit-Log-dan-Siklus-hidup-data-Data-Lifecycle-Management-
+Sistem ini dibangun dengan fokus utama pada pengelolaan keamanan sistem, audit aktivitas pengguna, serta pengelolaan siklus hidup data pada lingkungan SpaceHub &amp; Co. Seluruh aktivitas akses masuk dan keluar dilakukan menggunakan pintu digital berbasis IoT sehingga menghasilkan data log dalam jumlah yang sangat besar setiap harinya.
