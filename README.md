@@ -1,6 +1,5 @@
 # Domain-Keamanan-Audit-Log-dan-Siklus-hidup-data-Data-Lifecycle-Management-
-# ![Database](https://img.shields.io/badge/DATABASE-MySQL-blue)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+# ![Database](https://img.shields.io/badge/DATABASE-MySQL-blue) ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
 ![Tugas](https://img.shields.io/badge/TUGAS-BESAR-orange)
 ![Universitas](https://img.shields.io/badge/UNIVERSITAS-MUHAMMADIYAH_KENDARI-brightgreen)
 ![Status](https://img.shields.io/badge/STATUS-COMPLETED-success)
